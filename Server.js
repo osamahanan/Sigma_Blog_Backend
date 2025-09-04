@@ -73,7 +73,7 @@ app.use(async (req, res, next) => {
 });
 
 
-// app.use("/api", blogRouter);
+app.use("/api", blogRouter);
 
 app.get("/", (req, res) => {
   res.send("Hello World");
