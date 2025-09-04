@@ -17,7 +17,7 @@ cloudinary.config({
 
 
 app.use(cors({
-    origin:["http://localhost:5174","http://localhost:5173"]
+    origin:["http://localhost:5174","http://localhost:5173","https://sigma-blog-pied.vercel.app"]
 }))
 
 app.use(express.json())
