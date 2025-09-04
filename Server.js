@@ -28,7 +28,7 @@ app.use(
 
 
 
-app.use(express.json({limit:"50mb"}))
+app.use(express.json({ limit: "50mb" }))
 app.use(express.urlencoded({ extended: true, limit: '50mb' }))
 
 // Connect to database
@@ -39,7 +39,7 @@ const connectToDatabase = async () => {
     console.log('Using existing database connection');
     return;
   }
-  
+
   try {
     await connectDb();
     isConnected = true;
@@ -65,9 +65,9 @@ app.use(async (req, res, next) => {
     next();
   } catch (error) {
     console.error('Database connection error in middleware:', error);
-    res.status(500).json({ 
-      success: false, 
-      message: 'Database connection failed' 
+    res.status(500).json({
+      success: false,
+      message: 'Database connection failed'
     });
   }
 });
@@ -81,8 +81,8 @@ app.get("/", (req, res) => {
 
 
 
-app.listen(port,()=>{
-    console.log(`server is running ${port}`);
-    
+app.listen(port, () => {
+  console.log(`server is running ${port}`);
+
 })
 
